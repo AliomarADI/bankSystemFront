@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "banksystem"
+    }
+  },
+  "defaultProject": "banksystem",
+  "cli": {
+    "analytics": "9361e224-9d23-4d1c-8845-37d8072d35f3"
+  }
 }
