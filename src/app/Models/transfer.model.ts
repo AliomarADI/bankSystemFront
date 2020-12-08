@@ -5,4 +5,8 @@ export class TransferModel {
   amount: number;
   receiverID: number;
   senderID: number;
+  date: Date;
+
+  constructor() {
+  }
 }

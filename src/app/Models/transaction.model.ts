@@ -1,13 +1,12 @@
 export class TransactionModel {
+  constructor() {
+  }
 
   id: number;
   amount: number;
-  nameOfService: string;
+  type: string;
+  createdDate: Date;
+  commission: number;
+  value: string;
 
-
-  constructor(id: number, amount: number, nameOfService: string) {
-    this.id = id;
-    this.amount = amount;
-    this.nameOfService = nameOfService;
-  }
 }

@@ -16,7 +16,7 @@ import { TransferBlockComponent } from './components/elements/transfer-block/tra
 import { TransactionBlockComponent } from './components/elements/transaction-block/transaction-block.component';
 import { ProfileBlockComponent } from './components/elements/profile-block/profile-block.component';
 import { TestPageComponent } from './components/elements/test-page/test-page.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({

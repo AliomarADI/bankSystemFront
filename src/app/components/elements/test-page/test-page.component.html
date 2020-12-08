@@ -10,13 +10,13 @@
     <div class="col-4">
 
       <h3>Test page</h3>
-        <label>Username: </label>
-      <input type="text"  [(ngModel)]="userName">
-      <button (click)="search()"> Search </button>
+<!--        <label>Username: </label>-->
+<!--      <input type="text"  [(ngModel)]="user.username">-->
+<!--      <button (click)="search()"> Search </button>-->
 
-      <div *ngIf="response">
-          <img src="{{response.avatar_url}}">
-      </div>
+<!--      <div *ngIf="response">-->
+<!--          <img src="{{response.avatar_url}}">-->
+<!--      </div>-->
 
       <hr>
       <hr>
@@ -25,26 +25,30 @@
 
         <div class="form-group">
           <label  >Имя Фамилия Отчество</label>
-          <input [(ngModel)]="user.name"  class="form-control"  placeholder="Enter your Full Name">
+          <input [(ngModel)]="user.fullname" name="fullname"  class="form-control"  placeholder="Enter your Full Name">
         </div>
 
+        <div class="form-group">
+        <label  >USername</label>
+        <input [(ngModel)]="user.username" name="username"  class="form-control"  placeholder="Enter your Full Name">
+        </div>
 
         <div class="form-group">
           <label  >Введите номер:</label>
           <input type="email" class="form-control"  placeholder="Enter phone number">
-          <small [(ngModel)]="user.phone" id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+          <small [(ngModel)]="user.phoneNumber" name="phoneNumber" id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
         </div>
 
         <div class="form-group">
           <label >Password</label>
-          <input [(ngModel)]="user.password" type="password" class="form-control" placeholder="Password">
+          <input [(ngModel)]="user.password" name="password" type="password" class="form-control" placeholder="Password">
         </div>
 
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button (click)="create()" style="float: right" type="submit" class="btn btn-primary">Submit</button>
+        <button (click)="create(user)" style="float: right" type="submit" class="btn btn-primary">Submit</button>
       </form>
 
       <hr>

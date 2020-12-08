@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {User} from '../../../Models/user.model';
+import {UserService} from '../../../service/user.service';
 
 @Component({
   selector: 'app-test-page',
@@ -17,34 +18,35 @@ export class TestPageComponent implements OnInit {
   // password: string;
 
   users: User[];
-
-  user : User;
-
+  user = new User();
   date: Date;
 
-  localUrl = 'http://localhost:4200/';
 
-  constructor(private http: HttpClient) {
+  constructor(private userService: UserService,
+  ) {
   }
 
   ngOnInit(): void {
 
   }
 
-  search(){
-    this.http.get('https://api.github.com/users/' + this.userName)
-      .subscribe((response) => {
-        this.response = response;
-        console.log(this.response);
-      })
-  }
+  // search(){
+  //   this.http.get('https://api.github.com/users/' + this.userName)
+  //     .subscribe((response) => {
+  //       this.response = response;
+  //       console.log(this.response);
+  //     })
+  // }
 
 
-
-  create(){
-
-    this.http.post('http://localhost:4200/api/users/create', this.user);
-    console.log(this.user + " created!")
+  create(user: User): any {
+    console.log(user);
+    this.userService.createUser(user).subscribe(res => {
+      this.user = res;
+      console.log('user');
+      console.log(this.user);
+      console.log(res);
+    });
   }
 
 }
