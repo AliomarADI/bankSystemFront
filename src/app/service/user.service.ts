@@ -8,6 +8,8 @@ import {User} from '../Models/user.model';
 })
 export class UserService {
 
+  loggedId = false;
+  user = null;
   constructor(private http: HttpClient) {
   }
 
@@ -25,5 +27,9 @@ export class UserService {
 
   updateUser(user: User): Observable<any> {
     return this.http.post('/users/update', user);
+  }
+
+  login(username: string, password: string): Observable<any> {
+    return this.http.get(`/users/login?username=${username}&password=${password}`);
   }
 }

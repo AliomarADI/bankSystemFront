@@ -34,13 +34,13 @@ import {FormsModule} from '@angular/forms';
     TransferBlockComponent,
     TransactionBlockComponent,
     ProfileBlockComponent,
-    TestPageComponent
+    TestPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

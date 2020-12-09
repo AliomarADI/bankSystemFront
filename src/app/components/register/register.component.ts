@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../service/user.service';
+import {User} from '../../Models/user.model';
 
 @Component({
   selector: 'app-register',
@@ -7,11 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userServ: UserService) { }
 
-  checkMe: boolean;
+  checkMe: boolean = false;
 
 
+  fullName: string;
+  password1: string;
+  password2: string;
+  username: string;
+  phoneNumber:string;
+  user = new User(0, "", "", "", 0, "");
+
+  create(user:User,pas2:string){
+    if(user.password == pas2){
+      this.userServ.createUser(user).subscribe(res=>{
+        console.log(res);
+      });
+    }
+  }
+
+  deleteUser(id: number){
+    this.userServ.deleteUser(id);
+  }
+
+  getUser(id: number){
+    this.userServ.getUser(id);
+  }
+
+  updateUser(user: User){
+    this.userServ.updateUser(user);
+  }
 
   ngOnInit(): void {
   }

@@ -18,7 +18,6 @@ export class TestPageComponent implements OnInit {
   // password: string;
 
   users: User[];
-  user = new User();
   date: Date;
 
 
@@ -38,15 +37,5 @@ export class TestPageComponent implements OnInit {
   //     })
   // }
 
-
-  create(user: User): any {
-    console.log(user);
-    this.userService.createUser(user).subscribe(res => {
-      this.user = res;
-      console.log('user');
-      console.log(this.user);
-      console.log(res);
-    });
-  }
 
 }

@@ -1,22 +1,26 @@
 export  class User {
   id: number;
-  fullname: string;
-  phoneNumber: number;
-  password: string;
+
   username: string;
+
+  password: string;
+
+  fullname: string;
+
   amount: number;
 
-  constructor() {
+  phoneNumber: string;
+
+
+  constructor(id: number, username: string, password: string, fullname: string, amount: number, phoneNumber: string) {
+    this.id = id;
+    this.username = username;
+    this.password = password;
+    this.fullname = fullname;
+    this.amount = amount;
+    this.phoneNumber = phoneNumber;
   }
-
-//   constructor(id: number, name: string, username: string, phone: number, password: string, amount: number) {
-//     this.id = id;
-//     this.fullname = name;
-//     this.username = username;
-//     this.phoneNumber = phone;
-//     this.password = password;
-//     this.amount = amount;
-// }
-
-
 }
+
+
+
