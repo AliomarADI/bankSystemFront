@@ -1,6 +1,7 @@
 export class TransactionModel {
 
   id: number;
+  payerId: number;
   amount: number;
   type: string;
   createdDate: Date;
@@ -8,8 +9,8 @@ export class TransactionModel {
   value: string;
 
 
-  constructor(id: number, amount: number, type: string, value: string , commission: number) {
-    this.id = id;
+  constructor(payerId: number, amount: number, type: string, value: string , commission: number) {
+    this.payerId = payerId;
     this.amount = amount;
     this.type = type;
     this.value = value;

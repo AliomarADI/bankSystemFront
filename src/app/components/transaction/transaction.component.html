@@ -12,12 +12,20 @@
           <br>
 
           <div class="form-group">
-            <input [(ngModel)]="pick" name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Что хотите оплатить?">
+              <select name="name" id="selected" [(ngModel)]="value">
+                <option [ngValue]="ts.value" *ngFor="let ts of tsType">{{ts.name}}</option>
+              </select>
           </div>
 
-          <div class="form-group">
-            <input [(ngModel)]="addinfo" name="value" type="text" class="form-control" placeholder="Add info">
-          </div>
+
+
+<!--          <div class="form-group">-->
+<!--            <input [(ngModel)]="pick" name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Что хотите оплатить?">-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            <input [(ngModel)]="addinfo" name="value" type="text" class="form-control" placeholder="Add info">-->
+<!--          </div>-->
 
           <div class="form-group">
             <input [(ngModel)]="amount" name="amount" type="text" class="form-control" placeholder="0т">
@@ -25,7 +33,7 @@
           </div>
 
           <br>
-          <button (click)="send(pick,addinfo,amount)" class="btn-primary"> Отправить </button>
+          <button (click)="send(value,value,amount)" class="btn-primary"> Отправить </button>
           <br>
           <br>
           <br>
