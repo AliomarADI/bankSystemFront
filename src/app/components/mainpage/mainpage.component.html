@@ -1,48 +1,62 @@
 <br>
+<br>
+<br>
 
 <div class="container">
   <div class="row">
-    <div class="col-1"></div>
+<!--    <div class="col-1"></div>-->
 <!--    Carousel component-->
-    <div class="col-6" id="carousel">
+    <div class="col-8" id="carousel">
         <app-carousel></app-carousel>
 <!--      -->
     </div>
 
-    <div class="col-3">
-        <div class="scale" >
+    <div class="col-4">
+        <div class="scale" style="border-radius: 28%">
           <a routerLink="/login">  <img id="halfBlock1" style="width: 100%" src="assets/images/allAboutURCart.jpg"> </a>
         </div>
       <div class="w-100"></div>
       <br>
-        <div class="scale">
+        <div class="scale" style="border-radius: 28%">
           <a routerLink="/login">  <img  id="halfBlock2" style="width: 100%" src="assets/images/platezhUslug.jpg"> </a>
         </div>
     </div>
-    <div class="col-1"></div>
+<!--    <div class="col-1"></div>-->
   </div>
 <!--  next row  *************************************************************-->
   <br>
+  <br>
+  <br>
 
-  <div class="row">
-      <div class="col-3"></div>
+  <div class="row" style="padding: 1%">
+      <div class="col-2"></div>
 
-      <div class="col-2 text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.8; border-radius: 10%;">
-        <a style="text-decoration: none" routerLink="/transfer"><h2>Transfer</h2></a>
+      <div class="col-2 text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.97; border-radius: 10%;">
+        <a style="text-decoration: none" routerLink="/transfer"><img style="width: 100%" src="assets/images/perevod.png" alt="perevod"></a>
+        <h4 class="text-center">Transfer</h4>
       </div>
 
-      <div class="col-2 text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.8; border-radius: 10%;">
-        <a style="text-decoration: none" routerLink="/transaction"><h2>Transaction</h2></a>
+        <div class="col-1"></div>
+
+      <div class="col-2 text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.99; border-radius: 10%;">
+        <br>
+        <a style="text-decoration: none" routerLink="/transaction"><img style="width: 100%;" src="assets/images/transaction.png" alt=""></a>
+        <h4 class="text-center">Transactions</h4>
       </div>
 
-      <div class="col-2  text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.8; border-radius: 10%;">
+      <div class="col-1"></div>
+
+      <div class="col-2  text-dark" style="background-image: url('assets/images/platezhUslug.jpg'); opacity: 0.97; border-radius: 10%;">
         <a style="text-decoration: none" routerLink="/profile">
           <app-profile-block></app-profile-block>
         </a>
+        <h4 class="text-white text-center">Profile</h4>
       </div>
 
     <div class="col-3"></div>
   </div>
 </div>
 
+  <br>
+  <br>
   <br>
