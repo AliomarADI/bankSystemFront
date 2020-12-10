@@ -1,6 +1,4 @@
 export class TransactionModel {
-  constructor() {
-  }
 
   id: number;
   amount: number;
@@ -9,4 +7,12 @@ export class TransactionModel {
   commission: number;
   value: string;
 
+
+  constructor(id: number, amount: number, type: string, value: string , commission: number) {
+    this.id = id;
+    this.amount = amount;
+    this.type = type;
+    this.value = value;
+    this.commission = commission;
+  }
 }
