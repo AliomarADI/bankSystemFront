@@ -28,25 +28,25 @@
 
             <select class="form-control" name="name" [(ngModel)]="select">
 
-              <option  value="onay">Onay</option>
-              <option  value="esp">ЕСП</option>
-              <option  value="shtraf">Штраф</option>
-              <option  value="balance">Пополнить баланс</option>
-              <option   value="nalog">Налог</option>
-              <option  value="other">Другое</option>
+              <option  value="ONAY">Onay</option>
+              <option  value="ESP">ЕСП</option>
+              <option  value="FINE">Штраф</option>
+              <option  value="PHONE">Пополнить баланс</option>
+              <option   value="TAX">Налог</option>
+              <option  value="OTHER">Другое</option>
 
             </select>
           </div>
 
-          <div *ngIf="select == 'onay'" class="form-group">
+          <div *ngIf="select == 'ONAY'" class="form-group">
             <input class="form-control" [(ngModel)]="test" name="number" type="text" placeholder="Введите последние 8 цифр">
           </div>
 
-          <div *ngIf="select == 'balance'" class="form-group">
+          <div *ngIf="select == 'PHONE'" class="form-group">
             <input class="form-control" [(ngModel)]="test" name="number" type="text" placeholder="Введите номер">
           </div>
 
-          <div *ngIf="select == 'other'" class="form-group">
+          <div *ngIf="select == 'OTHER'" class="form-group">
             <input class="form-control" [(ngModel)]="test" name="number" type="text" placeholder="Введите название организации:">
           </div>
 
@@ -61,7 +61,7 @@
           </div>
 
           <br>
-          <button (click)="send(choose,test,amount)" class="btn-primary"> Отправить </button>
+          <button (click)="send(select,test,amount)" class="btn-primary"> Отправить </button>
           <br>
           <br>
           <br>

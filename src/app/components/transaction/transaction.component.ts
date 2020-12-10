@@ -30,7 +30,7 @@ export class TransactionComponent implements OnInit {
   select: any;
 
   choose: any;
-  value: string;
+
   user = this.userServe.user;
   payerId = this.user.id;
 
