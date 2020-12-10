@@ -5,7 +5,7 @@ import {LoginComponent} from './components/login/login.component';
 import {RegisterComponent} from './components/register/register.component';
 import {TransactionComponent} from './components/transaction/transaction.component';
 import {TransferComponent} from './components/transfer/transfer.component';
-import {TestPageComponent} from './components/elements/test-page/test-page.component';
+import {ProfileComponent} from './components/profile/profile.component';
 
 const routes: Routes = [
   {path: '', component: MainpageComponent},
@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'transaction', component: TransactionComponent},
   {path: 'transfer', component: TransferComponent},
-  {path: 'testpage', component: TestPageComponent}
+  {path: 'profile' , component: ProfileComponent}
 ];
 
 @NgModule({

@@ -15,9 +15,10 @@ import { TransactionComponent } from './components/transaction/transaction.compo
 import { TransferBlockComponent } from './components/elements/transfer-block/transfer-block.component';
 import { TransactionBlockComponent } from './components/elements/transaction-block/transaction-block.component';
 import { ProfileBlockComponent } from './components/elements/profile-block/profile-block.component';
-import { TestPageComponent } from './components/elements/test-page/test-page.component';
 import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { HeaderLoggedComponent } from './components/header-logged/header-logged.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {FormsModule} from '@angular/forms';
     TransferBlockComponent,
     TransactionBlockComponent,
     ProfileBlockComponent,
-    TestPageComponent,
+    HeaderLoggedComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

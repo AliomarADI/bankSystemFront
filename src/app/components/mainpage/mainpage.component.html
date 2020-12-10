@@ -23,19 +23,25 @@
   </div>
 <!--  next row  *************************************************************-->
   <br>
-  <div class="row">
-      <div class="col-2"></div>
-      <div class="col-2 bg-dark"><a routerLink="/transfer"><h2>Transfer</h2></a></div>
-      <div class="col-2 bg-dark" ><a routerLink="/transaction"><h2>Transaction</h2></a></div>
-      <div class="col-2 bg-dark"><a routerLink="#"><h2>Открыть депозит</h2></a></div>
 
-      <div class="col-2 bg-dark">
-        <a routerLink="/profile">
+  <div class="row">
+      <div class="col-3"></div>
+
+      <div class="col-2 text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.8; border-radius: 10%;">
+        <a style="text-decoration: none" routerLink="/transfer"><h2>Transfer</h2></a>
+      </div>
+
+      <div class="col-2 text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.8; border-radius: 10%;">
+        <a style="text-decoration: none" routerLink="/transaction"><h2>Transaction</h2></a>
+      </div>
+
+      <div class="col-2  text-dark" style="background-image: url('assets/images/digit.jpg'); opacity: 0.8; border-radius: 10%;">
+        <a style="text-decoration: none" routerLink="/profile">
           <app-profile-block></app-profile-block>
         </a>
       </div>
 
-    <div class="col-2"></div>
+    <div class="col-3"></div>
   </div>
 </div>
 

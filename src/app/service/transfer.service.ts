@@ -3,9 +3,11 @@ import {HttpClient} from '@angular/common/http';
 import {TransferModel} from '../Models/transfer.model';
 import {Observable} from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
+// @ts-ignore
 export class TransferService {
 
   constructor(private http: HttpClient) {

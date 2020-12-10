@@ -8,7 +8,7 @@ import {User} from '../Models/user.model';
 })
 export class UserService {
 
-  loggedId = false;
+  loggedIn = false;
   user = null;
   constructor(private http: HttpClient) {
   }
@@ -32,4 +32,9 @@ export class UserService {
   login(username: string, password: string): Observable<any> {
     return this.http.get(`/users/login?username=${username}&password=${password}`);
   }
+
+  getByPhoneNumber(phoneNumber:string):Observable<any>{
+    return this.http.get(`/users/phoneNumber?phoneNumber=${phoneNumber}`);
+  }
+
 }
