@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+
+      <div class="col-1" style="opacity: 0.88; background-color: black"></div>
+      <div class="col-1" style="opacity: 0.89; background-color: black"></div>
+
+<!--          profile block-->
+        <div class="col-8" style="background-color: black; opacity: 0.90">
+          <br>
+          <div>
+            <h2 class="font-italic" style="background-image: url('assets/images/stars.webp')">{{user.username}}</h2>
+          </div>
+
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <div class="card text-dark" >
+            <h4 class="card-header bg-light">Ваши данные</h4>
+            <div class="card-body">
+              <h5 class="card-text">Имя О. Ф. : {{user.fullname}}</h5>
+              <h5 class="card-text">Ваш номер: {{user.phoneNumber}}</h5>
+              <h5 class="card-text">Ваш счет: {{user.amount}}</h5>
+
+            </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+
+          <button class="btn-primary" (click)="historyOfTransfers()">History transfers</button>
+
+          <ul *ngFor="let ts of transfers">
+            <li>{{ts.id}} : {{ts.amount}} : {{ts.date}}</li>
+          </ul>
+
+        </div>
+
+      <div class="col-1" style="opacity: 0.89; background-color: black"></div>
+      <div class="col-1" style="opacity: 0.88; background-color: black"></div>
+
+    </div>
+</div>
+
+
