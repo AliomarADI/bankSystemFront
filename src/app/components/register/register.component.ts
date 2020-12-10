@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../service/user.service';
 import {User} from '../../Models/user.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import {User} from '../../Models/user.model';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private userServ: UserService) { }
+  constructor(private userServ: UserService,private router: Router) { }
 
   checkMe: boolean = false;
 
@@ -25,6 +26,7 @@ export class RegisterComponent implements OnInit {
     if(user.password == pas2){
       this.userServ.createUser(user).subscribe(res=>{
         console.log(res);
+        this.router.navigate(['login']);
       });
     }
   }

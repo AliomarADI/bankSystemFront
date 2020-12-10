@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  date= new Date();
+
   ngOnInit(): void {
   }
 

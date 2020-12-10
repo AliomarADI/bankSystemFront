@@ -16,21 +16,18 @@ export class TransactionComponent implements OnInit {
   constructor(private userServe: UserService, private tsAction: TransactionService) { }
 
 
-  tsType: TransactionType[] = [
-    {value: 'ONAY',name: 'ONAY'},
-    {value: 'UTIL',name: 'ComService'},
-    {value: 'ESP',name: 'ЕСП'},
-    {value: 'FINE',name: 'Штраф'},
-    {value: 'TAX',name: 'Налог'}
-  ];
+  // tsType: TransactionType[] = [
+  //   {value: 'ONAY',name: 'ONAY'},
+  //   {value: 'UTIL',name: 'ComService'},
+  //   {value: 'ESP',name: 'ЕСП'},
+  //   {value: 'FINE',name: 'Штраф'},
+  //   {value: 'TAX',name: 'Налог'},
+  //   {value: 'Other', name: 'Другое'}
+  // ];
 
+  test: string;
 
-// const arr: TransactionType= [
-//   {id: 1, text: 'Sentence 1'},
-//   {id: 2, text: 'Sentence 2'},
-//   {id: 3, text: 'Sentence 3'},
-//   {id: 4, text: 'Sentenc4 '},
-// ];
+  select: any;
 
   choose: any;
   value: string;
