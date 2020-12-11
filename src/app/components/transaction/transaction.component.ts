@@ -5,6 +5,7 @@ import {TransactionService} from '../../service/transaction.service';
 import {TransferModel} from '../../Models/transfer.model';
 import {TransactionModel} from '../../Models/transaction.model';
 import {TransactionType} from '../../Models/transactionType.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-transaction',
@@ -13,7 +14,7 @@ import {TransactionType} from '../../Models/transactionType.model';
 })
 export class TransactionComponent implements OnInit {
 
-  constructor(private userServe: UserService, private tsAction: TransactionService) { }
+  constructor(private userServe: UserService, private tsAction: TransactionService,private router: Router) { }
 
 
   // tsType: TransactionType[] = [
@@ -51,6 +52,7 @@ export class TransactionComponent implements OnInit {
       {
 
         console.log(res);
+        this.router.navigate(['checkpage']);
       }
     );
   }

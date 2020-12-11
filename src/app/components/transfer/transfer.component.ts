@@ -3,6 +3,7 @@ import {UserService} from '../../service/user.service';
 import {User} from '../../Models/user.model';
 import {TransferModel} from '../../Models/transfer.model';
 import {TransferService} from '../../service/transfer.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-transfer',
@@ -42,6 +43,7 @@ export class TransferComponent implements OnInit {
       {
         transfer = res;
         console.log(transfer);
+        this.router.navigate(['checkpage']);
       })
 
     }
@@ -53,7 +55,7 @@ export class TransferComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor(private userLog: UserService, private transferServ: TransferService) {
+  constructor(private userLog: UserService, private transferServ: TransferService, private router:Router) {
   }
 
 }

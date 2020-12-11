@@ -1,50 +1,40 @@
+
 <div class="container">
-    <div class="row">
+  <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6 bg-dark" style="opacity: 0.99">
+        <br>
+        <h3>Ваши данные</h3>
+        <h5 class="card-text">Ф.И.О. : <span style="text-indent: 1px">{{user.fullname}}</span></h5>
+        <h5 class="card-text">Ваш номер: {{user.phoneNumber}}</h5>
+        <h5 class="card-text">Ваш счет: {{user.amount}}</h5>
+      </div>
+      <div class="col-3"></div>
+  </div>
 
-      <div class="col-1" style="opacity: 0.88; background-color: black"></div>
-      <div class="col-1" style="opacity: 0.89; background-color: black"></div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 bg-dark" style="opacity: 0.99">
+      <br>
 
-<!--          profile block-->
-        <div class="col-8" style="background-color: black; opacity: 0.90">
-          <br>
-          <div>
-            <h2 class="font-italic" style="background-image: url('assets/images/stars.webp')">{{user.username}}</h2>
-          </div>
+      <button style="width: 100%" class=" btn btn-dark" (click)="historyOfTransactions()">History transactions</button>
 
+      <ul class="list-group bg-dark" *ngFor="let ts of transActions">
+        <li class="list-group-item bg-dark">{{ts.id}}. {{ ts.type}} : {{ts.value}} <i style="text-indent: 10px">Сумма:</i>  {{ts.amount}} : </li>
+      </ul>
 
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+      <br>
+      <br>
+      <br>
 
-          <div class="card text-dark" >
-            <h4 class="card-header bg-light">Ваши данные</h4>
-            <div class="card-body">
-              <h5 class="card-text">Имя О. Ф. : {{user.fullname}}</h5>
-              <h5 class="card-text">Ваш номер: {{user.phoneNumber}}</h5>
-              <h5 class="card-text">Ваш счет: {{user.amount}}</h5>
+      <button style="width: 100%;" class="btn btn-dark" (click)="historyOfTransfers()">History transfers</button>
 
-            </div>
-          </div>
-
-          <br>
-          <br>
-          <br>
-
-          <button class="btn-primary" (click)="historyOfTransfers()">History transfers</button>
-
-          <ul *ngFor="let ts of transfers">
-            <li>{{ts.id}} : {{ts.amount}} : {{ts.date | date}}</li>
-          </ul>
-
-        </div>
-
-      <div class="col-1" style="opacity: 0.89; background-color: black"></div>
-      <div class="col-1" style="opacity: 0.88; background-color: black"></div>
+      <ul class="list-group bg-dark" *ngFor="let ts of transfers">
+        <li class="list-group-item bg-dark">{{ts.id}} : {{ts.amount}} : {{ts.date | date}}</li>
+      </ul>
 
     </div>
+    <div class="col-3"></div>
+  </div>
+
 </div>
-
-

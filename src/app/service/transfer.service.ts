@@ -21,6 +21,11 @@ export class TransferService {
     return this.http.get(`/transfers/get/sender?senderId=${id}`);
   }
 
+  getAllTransfers(): Observable<any>{
+    return this.http.get(`/transfers/all`);
+  }
+
+  // @ts-ignore
   getUserTransfersByReceiver(senderId: number, receiverId: number): Observable<any> {
     return this.http.get(`/transfers/get?senderId=${senderId}&receiverId=${receiverId}`);
   }
