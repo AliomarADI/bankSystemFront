@@ -10,7 +10,9 @@ export class HeaderLoggedComponent implements OnInit {
 
   constructor(private userLog: UserService) { }
 
-  date= new Date();
+  date = new Date();
+
+  user = this.userLog.user;
 
   logout(){
     this.userLog.loggedIn =false;

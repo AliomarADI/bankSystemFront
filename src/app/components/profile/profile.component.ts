@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, PipeTransform} from '@angular/core';
 import {UserService} from '../../service/user.service';
 import {User} from '../../Models/user.model';
 import {TransferService} from '../../service/transfer.service';
@@ -11,12 +11,15 @@ import {TransactionModel} from '../../Models/transaction.model';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit{
 
   constructor(private userLog: UserService,private transferServ: TransferService,private tsActionServe: TransactionService) { }
 
   transfers: TransferModel[];
   transActions: TransactionModel[];
+
+  searchts: boolean = false;
+  searchtf: boolean = false;
 
   // historyOfTransfers(){
   //   console.log("This user id: " + this.user.id);
@@ -27,8 +30,11 @@ export class ProfileComponent implements OnInit {
   //     })
   // }
 
-  user = this.userLog.user;
 
+
+  user = this.userLog.user;
+  sTransaction: '';
+  sTransfer: '';
 
   historyOfTransfers(){
 
@@ -36,6 +42,7 @@ export class ProfileComponent implements OnInit {
     {
       this.transfers = res;
       console.log(this.transfers);
+      this.searchtf = true;
     })
   }
 
@@ -46,10 +53,12 @@ export class ProfileComponent implements OnInit {
     {
       this.transActions = res;
       console.log(this.transActions);
+      this.searchts = true;
     })
   }
 
   ngOnInit(): void {
   }
+
 
 }

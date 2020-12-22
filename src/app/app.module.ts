@@ -19,25 +19,28 @@ import { HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { HeaderLoggedComponent } from './components/header-logged/header-logged.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { QuestionIconComponent } from './components/elements/question-icon/question-icon.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    MainpageComponent,
-    CarouselComponent,
-    EmptySpaceComponent,
-    LoginComponent,
-    RegisterComponent,
-    TransferComponent,
-    TransactionComponent,
-    TransferBlockComponent,
-    TransactionBlockComponent,
-    ProfileBlockComponent,
-    HeaderLoggedComponent,
-    ProfileComponent
-  ],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        MainpageComponent,
+        CarouselComponent,
+        EmptySpaceComponent,
+        LoginComponent,
+        RegisterComponent,
+        TransferComponent,
+        TransactionComponent,
+        TransferBlockComponent,
+        TransactionBlockComponent,
+        ProfileBlockComponent,
+        HeaderLoggedComponent,
+        ProfileComponent,
+        QuestionIconComponent
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

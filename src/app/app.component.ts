@@ -20,7 +20,7 @@ export class AppComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     this.loggedIn = this.userLog.loggedIn;
-    console.log("Pidaraz" + this.loggedIn);
+    console.log("user" + this.loggedIn);
   }
 
 
